@@ -3,6 +3,7 @@
 RESTful API backend for the **ITViec Clone** recruitment platform, built with **NestJS**, **TypeScript**, and **MongoDB (Mongoose)**. It provides authentication, fine-grained Role-Based Access Control (RBAC), company/job/resume management, file uploads, and automated weekly job notification emails via Cron Jobs.
 
 - **Live Frontend Demo:** [https://itviec-fe-gslm.vercel.app](https://itviec-fe-gslm.vercel.app)
+- **Demo Admin Account:** `admin@gmail.com` | **Password:** `123456`
 - **Frontend Repository:** [github.com/doquochuy2106/itviec-Fe](https://github.com/doquochuy2106/itviec-Fe)
 
 ---
