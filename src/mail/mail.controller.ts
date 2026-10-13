@@ -31,8 +31,8 @@ export class MailController {
 
   @Get()
   @Public()
-  @ResponseMessage('Test email')
-  @Cron('0 10 0 * * 0') // 0.10' am every sunday
+  @ResponseMessage('Trigger weekly job recommendation emails')
+  @Cron('0 10 0 * * 0') // 00:10 AM every Sunday
   async handleTestEmail() {
     const subscribers = await this.subscriberModel.find({});
     for (const subs of subscribers) {
@@ -52,9 +52,9 @@ export class MailController {
         });
 
         await this.mailerService.sendMail({
-          to: 'huy.do02062004@gmail.com',
-          from: '"Support Team" <support@example.com>', // override default from
-          subject: 'Welcome to Nice App! Confirm your Email',
+          to: subs.email,
+          from: '"ITViec Support Team" <support@itviec.com>',
+          subject: 'Cơ hội việc làm IT mới nhất dành cho bạn',
           template: 'new-job',
           context: {
             receiver: subs.name,
